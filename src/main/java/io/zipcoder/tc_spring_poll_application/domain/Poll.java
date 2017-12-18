@@ -1,12 +1,11 @@
 package io.zipcoder.tc_spring_poll_application.domain;
 
-import com.sun.javafx.beans.IDProperty;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class Poll {
+public class Poll{
 
     @Id
     @GeneratedValue
@@ -21,11 +20,12 @@ public class Poll {
     @OrderBy
     private Set<Option> options;
 
-    public Long getID(){
+    public Long getPollId(){
         return this.id;
     }
 
-    public String getQuestion(){
+
+    public String getPollQuestion(){
         return this.question;
     }
 
